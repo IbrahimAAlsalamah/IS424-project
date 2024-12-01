@@ -1,10 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
-<h2>Item Details</h2>
-<p><strong>Name:</strong> {{ item.name }}</p>
-<p><strong>Description:</strong> {{ item.description }}</p>
-<p><strong>Price:</strong> ${{ item.price }}</p>
+<h1>{{ item.name }}</h1>
+    <p>Description: {{ item.description }}</p>
+    <p>Price: ${{ item.price }}</p>
+    <p>Quantity: {{ item.quantity }}</p>
 
-<a href="{% url 'update_item' item.id %}">Edit Item</a>
-<a href="{% url 'list_items' %}">Back to Items</a>
+    <!-- Form to add/purchase/rent item -->
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Add to Cart</button>
+    </form>
+
+    <!-- Link to update item -->
+    <a href="{% url 'update_item' item.id %}">Update Item</a>
 {% endblock %}

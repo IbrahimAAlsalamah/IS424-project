@@ -1,15 +1,12 @@
-// scripts.js
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("form");
-    if (form) {
-        form.onsubmit = function () {
-            const inputs = form.querySelectorAll("input[required]");
-            for (let input of inputs) {
-                if (!input.value) {
-                    alert(`${input.name} is required`);
-                    return false;
-                }
-            }
-        };
-    }
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirm_password').value;
+
+        if (password !== confirmPassword) {
+            alert("Passwords do not match.");
+            e.preventDefault();
+        }
+    });
 });
