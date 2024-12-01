@@ -78,31 +78,34 @@ h2 {
     text-decoration: underline;
 }
 
-/* General body styling */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
+    padding-top: 60px; /* Avoid overlapping with the navbar */
 }
 
 .container {
     text-align: center;
-    margin-top: 80px; /* Add margin to avoid overlapping with navbar */
+    margin-top: 80px;
 }
 
 table {
-    width: 80%;
-    margin: 20px auto;
+    width: 95%; /* Increased width for a larger table */
+    margin: 30px auto; /* Center the table */
     border-collapse: collapse;
     background-color: #ffffff;
     border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhance shadow */
+    overflow-x: auto; /* Responsive for small screens */
+    display: block; /* Enable horizontal scrolling */
 }
 
 th, td {
-    padding: 10px;
+    padding: 20px; /* Added more padding for better spacing */
     text-align: center;
     border: 1px solid #ddd;
+    font-size: 18px; /* Larger font for better readability */
 }
 
 th {
@@ -112,19 +115,27 @@ th {
 }
 
 td {
-    font-size: 14px;
+    font-size: 16px; /* Slightly smaller font for content cells */
 }
 
 a {
     text-decoration: none;
     color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transitions */
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-body {
-    padding-top: 60px;
+tr:hover {
+    background-color: #f1f1f1; 
+    transition: background-color 0.3s ease; 
+}
+
+/* Universal box-sizing for consistent dimensions */
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 

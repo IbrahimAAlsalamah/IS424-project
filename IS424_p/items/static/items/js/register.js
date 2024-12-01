@@ -4,7 +4,7 @@ document.getElementById("registerForm").addEventListener("submit", function(even
     const passwordError = document.getElementById("passwordError");
 
     if (password !== confirmPassword) {
-        event.preventDefault(); // Prevent form submission
+        event.preventDefault(); 
         passwordError.style.display = "block"; // Show error message
     } else {
         passwordError.style.display = "none"; // Hide error message

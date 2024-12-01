@@ -31,7 +31,10 @@
     </style>
 </head>
 <body>
+    {% load static %}
+    <img src="{% static 'items/image/logo.png' %}" alt="Logo" class="logo">
     <div class="login-container">
+        
         <h1>Login</h1>
 
         <form method="POST" action="{% url 'login' %}">
